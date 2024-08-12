@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link de folhas de estilo externas-->
+    <link rel="stylesheet" href="estilo.css">
+    <title>Samuel Santos - Quem sou eu?</title>
+    <!--Link de icone de favorito-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!--Inicio cabecalho-->
+    <header>
+        <a href="index.html"><img src="img/logos.png" alt="Logo com a letra S. Cor branca, fundo verde" id="logos"></a>
+        <h1>Samuel Santos</h1>
+
+        <nav>
+            <ul class="lista">
+                <abbr title="Página inicial">
+                    <a href="index.html">
+                        <li class="item-lista">Home</li>
+                    </a>
+                </abbr>
+                <abbr title="Sobre mim">
+                    <a href="#sobremim">
+                        <li class="item-lista">Quem eu sou?</li>
+                    </a>
+                </abbr>
+                <abbr title="Formação acadêmica e cursos">
+                    <a href="#sessaoformacao">
+                        <li class="item-lista">Formação</li>
+                    </a>
+                </abbr>
+                <abbr title="Projetos e trabalhos">
+                    <a href="#sessaoportfolio">
+                        <li class="item-lista">Portfólio</li>
+                    </a>
+                </abbr>
+                <abbr title="Entre em contato comigo">
+                    <a href="#sessaocontato">
+                        <li class="item-lista">Contato</li>
+                    </a>
+                </abbr>
+            </ul>
+        </nav>
+    </header>
+    <!--Fim cabecalho-->
+    <!--Inicio do conteudo principal-->
+    <main>
+        <!--Inicio Sessão Sobre mim-->
+        <section id="sessaosobremim">
+            <h2 id="sobremim">Sobre mim<span><img src="img/quemsou.svg" alt="Icone com balao de dialogo e sinal de interrogaçao" class="sessaoicone"></span></h2>
+            <p>
+                Olá pessoal. Me chamo Samuel, tenho 25 anos, sou natural de <a href="https://maps.app.goo.gl/6rs54W4q9Rm9CwB8A" target="_blank" rel="external"><strong>&#x1F4CDSão Luís/MA&#x1F4CE</strong></a>, atualmente resido em <a href="https://maps.app.goo.gl/BHhexA9kjhApDF9DA"target="_blank" rel="external"><strong>&#x1F4CDPaço do Lumiar/MA&#x1F4CE</strong></a>. Sou um entusiasta no mundo da tecnologia, tanto no hardware quanto no software. Atualmente faço faculdade de <abbr title="Análise e Desenvolvimento de Sistemas">ADS</abbr> e cursos livres voltados a informática, visando criar uma base sólida de conhecimento. Nas horas vagas assisto alguns Animes e eventualmente jogo futebol ou volêi. Desejo ser um excelente programador e desenvolvedor. Com um passar dos anos desejo ter uma sólida carreira, com muitas bençãos, muita saúde e um belo currículo além de ser um excelente profisional.
+            </p>
+        </section>
+        <!--Fim Sessão Sobre mim-->
+        <!--Inicio Sessão Formação-->
+        <section id="sessaoformacao">
+            <h2>Formação Acadêmica<span><img src="img/formacademica.svg" alt="Icone com uma folha de papel e um lapis" class="sessaoicone"></span></h2>
+            
+            <p>
+                Atualmente estou fazendo minha Graduação na <abbr title="Centro Universitário Internacional UNINTER">UNINTER</abbr> em Análise e Desenvolvimento de Sistemas. Fiz e faço também alguns cursos na plataforma do <a href="https://www.cursoemvideo.com/" target="_blank" rel="external">Curso Em Vídeo&#x1F4CE</a>, como o de JavaScript, Linux, Redes de Computadores e Internet, Hardware, Algoritmos e atualmente estou no terceiro módulo de HTML5 e CSS3.
+            </p>
+        </section>
+        <!--Fim Sessão Formação-->
+        <!--Inicio Sessão Portifólio-->
+        <section id="sessaoportfolio">
+            <h2>Portfólio<span><img src="img/portifolio.svg" alt="Icone com uma pasta e uma chave de fenda" class="sessaoicone"></span></h2>
+            
+            <p>
+                Aqui estão alguns projetos que recentemente vim desenvolvendo ao longo da minha jornada de aprendizado, com intuito de adquirir novos conhecimentos e assim aumentar meu portfólio. Segue abaixo alguns modelos.
+            </p>
+            <ul id="quadroimg">
+                    <li class="aimg">
+                        <a href="https://samuel-santos-ads-dev.github.io/portifolio1/" target="_blank" rel="author">
+                            <img src="img/perfilpessoal.png" alt="portfólio com perfil pessoal">
+                        </a>
+                    </li>
+
+                    <li class="aimg">
+                        <a href="https://samuel-santos-ads-dev.github.io/portifolio2/" target="_blank" rel="author">
+                            <img src="img/tela-login.png" alt="portfólio com tela de login">
+                        </a>
+                    </li>
+            
+                    <li class="aimg">
+                        <a href="https://samuel-santos-ads-dev.github.io/bugdroid/" target="_blank" rel="author">
+                            <img src="img/bugdroid.png" alt="portfólio site bugdroid">
+                        </a>
+                    </li>
+
+                    <li class="aimg">
+                        <a href="https://samuel-santos-ads-dev.github.io/sirtechblog/" target="_blank" rel="author">
+                            <img src="img/sirtechblog.png" alt="portfólio site sir tech blog">
+                        </a>
+                    </li>
+            </ul>
+        </section>
+        <!--Fim Sessão Portifólio-->
+        <!--Inicio Sessão Contato-->
+        <section id="sessaocontato">
+            <h2>Contato<span><img src="img/contato.svg" alt="Icone com uma carta aberta e uma lapis" class="sessaoicone"></span></h2>
+            
+            <form action="#" method="post" id="formulario">
+                <label for="nome">&#x1F4D2 Nome: </label>
+                <input type="text" name="nome" id="nome" placeholder="Insira seu nome" required>
+
+                <label for="email">&#x1F4E7 E-Mail: </label>
+                <input type="email" name="email" id="email" placeholder="Insira seu e-mail" required>
+
+                <label for="email">&#x1F4DD Mensagem: </label>
+                <textarea name="mensagem" id="mensagem" rows="5" placeholder="Digite aqui sua mensagem" required></textarea>
+
+                <input type="submit" value="Enviar" id="botao">
+            </form>
+        </section>
+        <!--Fim Sessão Contato-->
+    </main>
+    <!--Fim do conteudo principal-->
+    <!--Inicio do rodape-->
+    <footer>
+        <p>
+            Desenvolvido educacionalmente por <a href="https://www.linkedin.com/in/samuel-santos-ads-dev/" target="_blank">&copy;Samuel Santos&#x1F4CE</a>
+        </p>
+        
+        <div class="rodape">
+            
+            <a href="https://www.linkedin.com/in/samuel-santos-ads-dev/" rel="external" target="_blank">
+                <img src="img/linkedin.svg" alt="linkedin">
+            </a>
+
+            <a href="https://github.com/samuel-santos-ads-dev" rel="external" target="_blank">
+                <img src="img/github.svg" alt="github">
+            </a>
+
+            <a href="https://www.youtube.com/@SamuelSantoscpu" rel="external" target="_blank">
+                <img src="img/youtube.svg" alt="youtube">
+            </a>
+
+        </div>
+    </footer>
+    <!--Fim do rodape-->
+</body>
+</html>

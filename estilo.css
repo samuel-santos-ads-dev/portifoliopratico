@@ -1,0 +1,268 @@
+/*Definindo codificação*/
+
+@charset "UTF-8";
+
+/*Fontes usadas no site*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fontes/Lato/Lato-Regular.ttf') format('truetype'),
+    url('fontes/Lato/Lato-Bold.ttf') format('truetype'),
+    url('fontes/Lato/Lato-Italic.ttf') format('truetype'),
+    url('fontes/Lato/Lato-BoldItalic.ttf') format('truetype');
+}
+
+/*
+Formatação universal
+Retirando espaçamento e margem
+*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*lista de corres
+#2E3E30
+#315D3A
+#3CA551
+#29CF4A
+#07FA38
+*/
+
+/*Definindo algumas variáveis*/
+
+:root{
+    --fontepadrao: 'lato', Helvetica, sans-serif;
+    --fonteh1: 'Montserrat', sans-serif;
+    --cor1: #121b13;
+    --cor2: #315D3A;
+    --cor3: #3CA551;
+    --cor4: #29CF4A;
+    --cor5: #07FA38;
+    --corfundo: #07fa3827;
+}
+
+body{
+    background-color: var(--corfundo);
+    font-family: var(--fontepadrao);
+    font-weight: normal;
+}
+/**Inicio Configuração do cabeçalho*/
+header{
+    margin: auto;
+    width: 99%;
+    height: 17rem;
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor1));
+    border-radius: 0px 0px 20px 20px;
+
+}
+/*Logo*/
+header img{
+    display: block;
+    width: 7%;
+    margin: auto;
+    padding-top: 20px;
+
+}
+/*Título*/
+header h1{
+    font-family: var(--fonteh1);
+    text-align: center;
+    color: whitesmoke;
+    font-size: 4rem;
+    padding: 1rem;
+}
+
+/*Configuração da lista*/
+header ul{
+    text-align: center;
+}
+header ul li{
+    display: inline;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.lista abbr{
+    text-decoration: none;
+}
+.lista a{
+    color: whitesmoke;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    padding: 0.8rem;
+    border-radius: 10px;
+
+}
+.lista a:hover{
+    color: var(--cor1);
+    background-color: var(--cor5)
+}
+
+/**Fim Configuração do cabeçalho*/
+
+/**Inicio Configuração do conteúdo principal*/
+main{
+    min-width: 380px;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 0px;
+    padding: 0px 25px;
+    background-color: whitesmoke;
+}
+/*Titulo das sessões*/
+main h2{
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    background-image: radial-gradient(circle, var(--cor4), transparent);
+    color: var(--cor1);
+}
+/*Icone dos títulos*/
+.sessaoicone{
+    max-width: 55px;
+    min-width: 35px;
+    margin-bottom: -15px;
+}
+
+/*Paragráfos*/
+main p{
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    text-indent: 1.2rem;
+}
+
+main p a{
+    text-decoration: none;
+    color: var(--cor2);
+    background-color: var(--corfundo);
+}
+
+p abbr{
+    text-decoration: none;
+    color: var(--cor2);
+    background-color: var(--corfundo);
+    
+}
+
+/*Imagens do portifólio*/
+.aimg a img{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    width: 100%;
+    border-radius: 25px;
+}
+
+#quadroimg{
+    list-style: none;
+    columns: 2;
+}
+
+/*Formulário*/
+
+#sessaocontato{
+    padding-bottom: 10px;
+}
+
+#formulario{
+
+    width: 75%;
+    margin: auto;
+}
+
+#formulario input{
+    padding: 8px 0px;
+    border: 1px solid var(--cor1);
+}
+
+#formulario label, input, textarea{
+    display: block;
+    color: var(--cor1);
+    width: 100%;
+    border-radius: 10px;
+}
+label{
+    padding: 8px 0px;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+input::placeholder{
+    text-align: center;
+    font-style: italic;
+    padding-top: 28px;}
+
+textarea::placeholder{
+    text-align: center;
+    font-style: italic;
+    padding-top: 28px;
+}
+input#botao{
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    width: 20%;
+    min-width: 100px;
+    margin: 20px auto 10px auto;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor1));
+    color: whitesmoke;
+    border: none;
+    /*transition-duration: 0.2s;*/
+}
+
+input#botao:hover{
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor3));
+}
+
+/**Fim Configuração do conteúdo principal*/
+
+
+
+/**Inicio Configuração rodapé*/
+
+footer{
+    margin: 30px auto 0px auto;
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor1));
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 20px 20px 0px 0px;
+
+}
+
+.rodape{
+    display: flex;
+    gap: 8px;
+}
+
+footer p{
+    padding-top: 18px;
+    font-size: 1.2rem;
+    color: whitesmoke;
+}
+
+footer p a{
+    text-decoration: none;
+    color: var(--cor1);
+}
+
+footer img{
+    width: 50px;
+    height: 60px;
+}
+
+footer a:hover{
+    opacity: 0.6;
+}
+
+/**Fim Configuração rodapé*/
+
