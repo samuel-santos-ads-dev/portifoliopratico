@@ -18,9 +18,10 @@
 Formatação universal
 Retirando espaçamento e margem
 */
-*{
+* {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 
@@ -42,63 +43,72 @@ Retirando espaçamento e margem
     --cor3: #3CA551;
     --cor4: #29CF4A;
     --cor5: #07FA38;
-    --corfundo: #07fa3827;
+    --corfundo: #e1ffe784;
+    --branco: rgb(245, 245, 245);
 }
 
-body{
+body {
     background-color: var(--corfundo);
     font-family: var(--fontepadrao);
     font-weight: normal;
 }
+
 /**Inicio Configuração do cabeçalho*/
-header{
+header {
     margin: auto;
     width: 99%;
-    height: 17rem;
+    height: auto;
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor1));
     border-radius: 0px 0px 20px 20px;
 
 }
+
 /*Logo*/
-header img{
+header a img {
     display: block;
-    width: 7%;
+    width: 10%;
     margin: auto;
     padding-top: 20px;
 
 }
+
 /*Título*/
-header h1{
+header h1 {
     font-family: var(--fonteh1);
     text-align: center;
-    color: whitesmoke;
+    color: var(--branco);
     font-size: 4rem;
     padding: 1rem;
 }
 
 /*Configuração da lista*/
-header ul{
+header ul {
     text-align: center;
+    padding-bottom: 1.5em;
 }
-header ul li{
+
+header ul li {
     display: inline;
     font-size: 1.1rem;
     font-style: italic;
     font-weight: 600;
 }
 
-.lista abbr{
+.lista abbr {
     text-decoration: none;
 }
-.lista a{
-    color: whitesmoke;
+
+.lista a {
+    color: var(--branco);
     text-decoration: none;
     transition-duration: 0.5s;
     padding: 0.8rem;
-    border-radius: 10px;
+    border-radius: 15px;
+    margin: 0px 5px;
 
 }
-.lista a:hover{
+
+.lista a:hover {
     color: var(--cor1);
     background-color: var(--cor5)
 }
@@ -106,16 +116,20 @@ header ul li{
 /**Fim Configuração do cabeçalho*/
 
 /**Inicio Configuração do conteúdo principal*/
-main{
-    min-width: 380px;
+main {
+    min-width: 0;
+    width: 100%;
     max-width: 1100px;
     margin: auto;
     margin-top: 0px;
     padding: 0px 25px;
-    background-color: whitesmoke;
+    background-color: var(--branco);
+    border-radius: 25px;
+    box-shadow: 1px 1px 10px var(--cor1);
 }
+
 /*Titulo das sessões*/
-main h2{
+main h2 {
     text-align: center;
     font-size: 2rem;
     margin: 20px 0px;
@@ -123,28 +137,29 @@ main h2{
     background-image: radial-gradient(circle, var(--cor4), transparent);
     color: var(--cor1);
 }
+
 /*Icone dos títulos*/
-.sessaoicone{
+.sessaoicone {
     max-width: 55px;
     min-width: 35px;
     margin-bottom: -15px;
 }
 
 /*Paragráfos*/
-main p{
+main p {
     text-align: justify;
     font-size: 1.1rem;
     line-height: 1.8rem;
     text-indent: 1.2rem;
 }
 
-main p a{
+main p a {
     text-decoration: none;
     color: var(--cor2);
     background-color: var(--corfundo);
 }
 
-p abbr{
+p abbr {
     text-decoration: none;
     color: var(--cor2);
     background-color: var(--corfundo);
@@ -152,60 +167,68 @@ p abbr{
 }
 
 /*Imagens do portifólio*/
-.aimg a img{
+.aimg a img {
     display: block;
     margin: auto;
     padding: 10px;
     width: 100%;
     border-radius: 25px;
+    filter: drop-shadow(0px 0px 5px var(--cor1));
+
 }
 
-#quadroimg{
+#quadroimg {
     list-style: none;
     columns: 2;
 }
 
 /*Formulário*/
 
-#sessaocontato{
+#sessaocontato {
     padding-bottom: 10px;
 }
 
-#formulario{
+#formulario {
 
     width: 75%;
     margin: auto;
 }
 
-#formulario input{
+#formulario input {
     padding: 8px 0px;
-    border: 1px solid var(--cor1);
+    border: none;
 }
 
-#formulario label, input, textarea{
+#formulario input:focus, textarea:focus {
+    outline-color: var(--cor2);
+}
+
+#formulario label, input, textarea {
     display: block;
     color: var(--cor1);
     width: 100%;
     border-radius: 10px;
 }
-label{
+
+label {
     padding: 8px 0px;
     font-size: 1.1rem;
     font-style: italic;
     font-weight: 600;
 }
 
-input::placeholder{
+input::placeholder {
     text-align: center;
     font-style: italic;
     padding-top: 28px;}
 
-textarea::placeholder{
+textarea::placeholder {
     text-align: center;
     font-style: italic;
     padding-top: 28px;
 }
-input#botao{
+
+input#botao {
     font-size: 1.2rem;
     font-weight: bold;
     display: block;
@@ -214,13 +237,14 @@ input#botao{
     margin: 20px auto 10px auto;
     border-radius: 15px;
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor1));
-    color: whitesmoke;
+    color: var(--branco);
     border: none;
-    /*transition-duration: 0.2s;*/
+    transition-duration: 300ms;
 }
 
-input#botao:hover{
+input#botao:hover {
     background-image: linear-gradient(to bottom, var(--cor1), var(--cor3));
+    box-shadow: 0px 0px 2px var(--cor1);
 }
 
 /**Fim Configuração do conteúdo principal*/
@@ -229,40 +253,92 @@ input#botao:hover{
 
 /**Inicio Configuração rodapé*/
 
-footer{
-    margin: 30px auto 0px auto;
+footer {
+    margin-top: 20px;
+    /* margin: 30px auto 0px auto; */
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor1));
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 8px;
     padding: 10px;
     border-radius: 20px 20px 0px 0px;
 
 }
 
-.rodape{
+.rodapelogo {
     display: flex;
+    justify-content: space-between;
     gap: 8px;
 }
 
-footer p{
+footer p {
     padding-top: 18px;
     font-size: 1.2rem;
-    color: whitesmoke;
+    color: var(--branco);
+    text-align: justify;
 }
 
-footer p a{
+footer p a {
     text-decoration: none;
     color: var(--cor1);
 }
 
-footer img{
+footer img {
     width: 50px;
     height: 60px;
 }
 
-footer a:hover{
+footer a:hover {
     opacity: 0.6;
 }
 
 /**Fim Configuração rodapé*/
 
+@media screen and (max-width: 600px) {
+
+    /* Cabeçalho */
+    header{
+        width: 99%;
+    }
+
+    header a img {
+        width: 60px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 20px;
+    }
+
+    /* Conteúdo principal */
+    section {
+        width: 100%;
+    }
+
+    #quadroimg {
+    columns: 1;
+}
+
+    /* Rodapé */
+    .rodape {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    footer p {
+        padding-top: 5px;
+        text-align: center;
+    }
+
+    .rodapelogo {
+        justify-content: center;
+    }
+
+}
