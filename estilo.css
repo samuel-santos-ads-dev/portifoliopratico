@@ -22,6 +22,8 @@ Retirando espaçamento e margem
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: scroll-behavior 2000ms;
 }
 
 
